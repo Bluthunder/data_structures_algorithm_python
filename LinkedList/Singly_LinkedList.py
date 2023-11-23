@@ -76,9 +76,9 @@ class LinkedList:
 		return temp_node
 		
 	def setValue(self, index, value):
-		temp_node = get(index)
+		temp_node = self.get(index)
 		if temp_node:
-			temp.node.value = value
+			temp_node.value = value
 		return temp_node
 	
 
@@ -113,4 +113,6 @@ ll1.get(2)
 ll1.prepend(0)
 print(ll1)
 ll1.insert(3,10)
+print(ll1)
+ll1.setValue(3,11)
 print(ll1)
