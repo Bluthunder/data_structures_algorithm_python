@@ -100,7 +100,21 @@ class LinkedList:
 		self.length += 1
 		return True
 		
-		
+	def pop_first(self):
+	
+		if self.length == 0:
+			return None
+		popped_node = self.head
+		if self.length == 1:
+			self.head = None
+			self.tail = None
+		else :
+			self.head = self.head.next
+			popped_node.next = None
+		self.length -= 1
+		return popped_node
+	
+	def pop(self)
 	
 		
 
@@ -114,5 +128,6 @@ ll1.prepend(0)
 print(ll1)
 ll1.insert(3,10)
 print(ll1)
-ll1.setValue(3,11)
+# ll1.setValue(3,11)
+ll1.pop_first()
 print(ll1)
